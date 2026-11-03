@@ -108,18 +108,6 @@ graph TD
 * **Contexto:** Empréstimo rápido de material para uso exclusivo dentro dos blocos escolares durante o horário letivo.
 * **Entidade:** `EmprestimoKit`
   * Atributos: `id` (Long), `codigoKit` (String), `nomeAluno` (String), `horarioRetirada` (LocalTime), `horarioLimiteDevolucao` (LocalTime), `horarioDevolucaoReal` (LocalTime), `status` (String: `EM_USO`, `DEVOLVIDO_NO_PRAZO`, `DEVOLVIDO_COM_ATRASO`)
-* **Script DDL para SQL Server:**
-```sql
-CREATE TABLE tb_emprestimo_kit (
-    id BIGINT IDENTITY(1,1) PRIMARY KEY,
-    codigo_kit VARCHAR(50) NOT NULL,
-    nome_aluno VARCHAR(150) NOT NULL,
-    horario_retirada TIME NOT NULL,
-    horario_limite_devolucao TIME NOT NULL,
-    horario_devolucao_real TIME NULL,
-    status VARCHAR(30) NOT NULL DEFAULT 'EM_USO'
-);
-```
 * **Endpoints:**
   * `GET /api/kits-maker` — Lista kits emprestados.
   * `GET /api/kits-maker/{id}` — Detalhes do empréstimo.
