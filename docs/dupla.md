@@ -1,3 +1,3 @@
 # duplas
-1.
-2.
+1.Franz Braian Blanco Quenallata
+2.Neymar Rodrigo Condori Gonzayo
